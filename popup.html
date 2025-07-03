@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>YouTube Speed Controller</title>
+    <style>
+        body {
+            width: 250px;
+            padding: 15px;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: #ffffff;
+        }
+        .speed-control {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        h3 {
+            margin: 0 0 15px 0;
+            text-align: center;
+            color: #ffffff;
+            font-size: 18px;
+        }
+        .speed-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 8px;
+        }
+        button {
+            padding: 10px;
+            background-color: #333333;
+            color: white;
+            border: 1px solid #444444;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        button:hover {
+            background-color: #444444;
+            transform: translateY(-1px);
+        }
+        button.active {
+            background-color: #666666;
+            border-color: #888888;
+        }
+        .current-speed {
+            text-align: center;
+            font-weight: bold;
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #333333;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="speed-control">
+        <h3>YouTube Speed Controller</h3>
+        <div class="current-speed">Current Speed: <span id="currentSpeed">1x</span></div>
+        <div class="speed-grid">
+            <button id="speed1x">1x Speed</button>
+            <button id="speed1_5x">1.5x Speed</button>
+            <button id="speed2x">2x Speed</button>
+            <button id="speed2_5x">2.5x Speed</button>
+            <button id="speed3x">3x Speed</button>
+            <button id="speed3_5x">3.5x Speed</button>
+            <button id="speed4x">4x Speed</button>
+        </div>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html> 
